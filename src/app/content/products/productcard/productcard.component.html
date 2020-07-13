@@ -1,0 +1,164 @@
+<!--
+<div id="div1">
+<div class="card" style="width: 18rem;" id="card1">
+    <img src="assets\images\prod1_dettol.jpg" class="card-img-top" alt="...">
+    <hr>
+    <div class="card-body">
+      <h5 class="card-title"> Dettol </h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+
+  <div class="card" style="width: 18rem; " id="card2">
+    <img src="assets\images\prod2_diabetes.jpg" class="card-img-top" alt="...">
+    <hr>
+    <div class="card-body">
+      <h5 class="card-title"> Diabetes </h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+
+  <div class="card" style="width: 18rem;" id="card3">
+    <img src="assets\images\prod3_immunity_booster.jpg" class="card-img-top" alt="...">
+    <hr>
+    <div class="card-body">
+      <h5 class="card-title"> Immunity Boster </h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+
+  <div class="card" style="width: 18rem;" id="card4">
+    <img src="assets\images\prod4_thermometer.jpg" class="card-img-top" alt="...">
+    <hr>
+    <div class="card-body">
+      <h5 class="card-title"> Thermometer </h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+
+  <div class="card" style="width: 18rem;" id="card5">
+    <img src="assets\images\prod5_hand_sanitizer.jpg" class="card-img-top" alt="...">
+    <hr>
+    <div class="card-body">
+      <h5 class="card-title"> Hand Sanitizer </h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+
+  <div class="card" style="width: 18rem;" id="card6">
+    <img src="assets\images\prod6_vitawin_capsules.jpg" class="card-img-top" alt="...">
+    <hr>
+    <div class="card-body">
+      <h5 class="card-title"> Vitamin Capsules </h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+
+  <div class="card" style="width: 18rem;" id="card7">
+    <img src="assets\images\prod7_weight_management.jpg" class="card-img-top" alt="...">
+    <hr>
+    <div class="card-body">
+      <h5 class="card-title"> Weight Management </h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+
+  <div class="card" style="width: 18rem;" id="card8">
+    <img src="assets\images\prod8_inlife_immunity_capsules.jpg" class="card-img-top" alt="...">
+    <hr>
+    <div class="card-body">
+      <h5 class="card-title"> Inlife Immunity Capsules </h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+
+  <div class="card" style="width: 18rem;" id="card9">
+    <img src="assets\images\prod9_hand_sanitizer.jpg" class="card-img-top" alt="...">
+    <hr>
+    <div class="card-body">
+      <h5 class="card-title"> Hand Sanitizer </h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+
+  <div class="card" style="width: 18rem;" id="card10">
+    <img src="assets\images\prod10_vitamin_tablets.jpg" class="card-img-top" alt="...">
+    <hr>
+    <div class="card-body">
+      <h5 class="card-title"> Vitamin Tablets </h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+</div>
+
+-->
+
+
+<div class="card float-left m-2" style="width: 18rem;" *ngFor="let key of prodrecord">
+  <img src="assets\images\{{key.prod_img}}" class="card-img-top" alt="...">
+  <hr>
+  <div class="card-body">
+    <h5 class="card-title"> {{key.prodname}} </h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <p>Price : {{key.price}}</p>
+    <input type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" id="{{key.prodcode}}" value="Order Now" (click)="ordernow($event)" >
+  </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Practo - Online Pharmacy</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="row">
+            <div class="col-md-4">
+              <img src="assets/images/{{selectedProduct['prod_img']}}" alt="" width="90%">
+            </div>
+            <div class="col-md-8">
+              <h5>Product Code : {{selectedProduct['prodcode']}}</h5>
+              <p>Product Name : {{selectedProduct['prodname']}}</p>
+              <p>Description : {{selectedProduct['descr']}}</p>
+              <p id="txtprice">Price : {{selectedProduct['price']}}</p>
+              <input type="number" placeholder="Qtys" class="form-control mt-2 col-md-4" (change)="calculateprice($event)">
+              <p id="ptagprice" class="float-right text-white badge badge-primary">Rs. {{Billamount}} </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary"> Confirm Order </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--<script>
+  $(document).ready.(function(){
+    $("txtboxqtys").change.(function(){
+      var price=$("txtprice").val;
+      var qtys  = $( )
+    })
+    
+  });
+</script>
+-->

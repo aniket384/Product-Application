@@ -1,0 +1,18 @@
+#card1,#card2,#card3,#card4,#card5,#card6,#card7,#card8,#card9,#card10
+{
+    display: inline-block;
+    margin: 5px;
+    padding: 5px;
+}
+
+#div1
+{
+    margin: 10px;
+    padding: 20px;
+    margin-left: 28px;
+}
+
+#card1:hover
+{
+    background-color: skyblue;
+}
